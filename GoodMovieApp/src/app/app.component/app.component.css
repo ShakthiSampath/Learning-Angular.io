@@ -1,0 +1,39 @@
+
+.example-spacer {
+  flex: 1 0 auto;
+}
+/*md-grid-tile {
+    /*height: 350px;
+}*/
+
+.example-header-image {
+  background-image: url('../../assets/movie.jpg');
+  background-size: cover;
+}
+
+.example-card{
+    margin: 2%;
+    height: 350px;
+}
+
+.container{
+    margin: auto;
+    height: 500px;
+    padding-top: 100px;
+    background-image: url('../../assets/movie1.jpg');
+}
+
+.search{
+    width: 700px;
+   
+}
+
+.searchbar{
+    margin-left: 30%;
+    margin-top: 40px;
+}
+
+.searchbutton{
+    width: 70px;
+    height: 30px;
+}
