@@ -3,6 +3,7 @@ import { Http } from '@angular/http';
 import { MdDialog } from '@angular/material';
 
 import { AppComponent } from '../app.component/app.component'
+import { Movie } from '../movie/movie';
 
 @Component({
   selector: 'app-root',

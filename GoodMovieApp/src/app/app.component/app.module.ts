@@ -4,19 +4,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule, MdTabsModule, MdGridListModule, MdSlideToggleModule, MdAutocompleteModule, MdInputModule, MdDialogModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
-import { DialogResult } from '../movie-details.component/movie-details.component';
-import { MovieDetailsComponent} from '../movie-details.component/movie-details.component';
+import { DialogResult,MovieDetailsComponent} from '../movie-details.component/movie-details.component';
 import { DashboardComponent } from '../dashboard.component/dashboard.component';
 import { MovieListComponent } from '../movie-list.component/movie-list.component';
 import { MovieSearchService } from '../movie-search.service/movie-search.service';
 import { MoviesComponent } from '../movies.components/movies.components';
 
 @NgModule({
+
   declarations: [
     AppComponent,
     DialogResult,
     MovieDetailsComponent,
-    // DashboardComponent
+    DashboardComponent
+    
   ],
   imports: [
     BrowserAnimationsModule,
