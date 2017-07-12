@@ -1,0 +1,11 @@
+
+
+.example-header-image {
+  background-image: url('../../assets/movie.jpg');
+  background-size: cover;
+}
+
+.example-card{
+    margin: 2%;
+    height: 350px;
+}
