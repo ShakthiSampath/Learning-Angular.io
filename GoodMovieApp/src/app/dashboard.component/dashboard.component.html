@@ -1,0 +1,41 @@
+ 
+ <md-toolbar color="primary">
+  
+  <!--Header-->
+  <span>{{title}}</span>
+ 
+   <span class="example-spacer"></span>
+
+
+  <!--Toggle-->
+   <md-slide-toggle>Filter by Genre</md-slide-toggle>
+   
+</md-toolbar>
+ 
+ <!--Tabs-->
+ <div class = "tabs">
+  
+  <md-tab-group>
+  <md-tab>
+    <ng-template md-tab-label>
+      <md-icon>dashboard</md-icon>
+      Dashboard
+    </ng-template>
+  </md-tab>
+  <md-tab>
+    <ng-template md-tab-label>
+      <md-icon>thumb_up</md-icon> 
+      Favourites
+    </ng-template>
+  </md-tab>
+  </md-tab-group>
+
+</div>
+
+<!--Search-->
+
+  <md-input-container class="searchbar" >
+    <input mdInput class="search" #movie placeholder="Search by Movie Name" />
+  </md-input-container>
+
+<button class = "searchbutton" type="submit" (click)="search(movie.value); movie.value=''" >Search</button>

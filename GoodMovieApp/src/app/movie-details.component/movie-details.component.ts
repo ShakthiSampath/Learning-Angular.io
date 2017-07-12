@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Http } from '@angular/http';
+import { MdDialog } from '@angular/material';
+
+import { AppComponent } from '../app.component/app.component'
 
 @Component({
   selector: 'app-root',
@@ -8,5 +11,12 @@ import { Http } from '@angular/http';
 })
 
 export class MovieDetailsComponent{
+  constructor(public dialog: MdDialog) {}
+  details() {
+    this.dialog.open(DialogResult);
+  }
+}
 
+export class DialogResult {
+  
 }
