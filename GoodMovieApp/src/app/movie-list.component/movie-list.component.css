@@ -1,0 +1,6 @@
+.container{
+    margin: auto;
+    height: 500px;
+    padding-top: 100px;
+    background-image: url('../../assets/movie1.jpg');
+}

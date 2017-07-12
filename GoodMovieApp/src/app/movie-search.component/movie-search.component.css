@@ -1,0 +1,12 @@
+ .search{
+    width: 700px;
+   
+  }
+  .searchbar{
+      margin-left: 30%;
+      margin-top: 40px;
+  }
+  .searchbutton{
+    width: 70px;
+    height: 30px;
+  }

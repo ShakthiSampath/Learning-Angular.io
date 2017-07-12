@@ -1,26 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpModule } from '@angular/http';
 import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule, MdTabsModule, MdGridListModule, MdSlideToggleModule, MdAutocompleteModule, MdInputModule, MdDialogModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
-import { DialogResult,MovieDetailsComponent} from '../movie-details.component/movie-details.component';
+import { MovieDetailsComponent } from '../movie-details.component/movie-details.component';
 import { DashboardComponent } from '../dashboard.component/dashboard.component';
 import { MovieListComponent } from '../movie-list.component/movie-list.component';
-import { MovieSearchService } from '../movie-search.service/movie-search.service';
+import { MovieSearchComponent } from '../movie-search.component/movie-search.component';
 import { MoviesComponent } from '../movies.components/movies.components';
 
 @NgModule({
 
   declarations: [
     AppComponent,
-    DialogResult,
+    DashboardComponent,
+    MoviesComponent,
     MovieDetailsComponent,
-    DashboardComponent
-    
+    MovieListComponent,
+    MovieSearchComponent
   ],
   imports: [
+    BrowserModule,
     BrowserAnimationsModule,
+    HttpModule,
     MdButtonModule,
     MdCardModule,
     MdToolbarModule,
@@ -33,8 +37,9 @@ import { MoviesComponent } from '../movies.components/movies.components';
     MdInputModule,
     MdDialogModule
   ],
+  entryComponents: [MovieDetailsComponent],
   providers: [MdDialogModule],
-  bootstrap: [AppComponent,DialogResult]
+  bootstrap: [AppComponent ]
 })
 
 

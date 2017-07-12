@@ -1,23 +1,18 @@
 import { Component, Input } from '@angular/core';
 import { Http } from '@angular/http';
-import { MdDialog } from '@angular/material';
+import { MdDialog, MdDialogRef } from '@angular/material';
 
-import { AppComponent } from '../app.component/app.component'
-import { Movie } from '../movie/movie';
+
+import { Movie } from '../movie/movie'; 
 
 @Component({
-  selector: 'app-root',
+  selector: 'movie-details-component',
   templateUrl: './movie-details.component.html',
   styleUrls: ['./movie-details.component.css']
 })
 
 export class MovieDetailsComponent{
-  constructor(public dialog: MdDialog) {}
-  details() {
-    this.dialog.open(DialogResult);
+  constructor(public dialogRef: MdDialogRef<MovieDetailsComponent>) {
+    
   }
-}
-
-export class DialogResult {
-  
 }

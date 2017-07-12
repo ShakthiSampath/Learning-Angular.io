@@ -6,7 +6,7 @@ import { MdDialog, MdDialogRef } from '@angular/material';
 import 'rxjs/add/operator/startWith';
 import 'rxjs/add/operator/map';
 
-var title ;
+
 
 @Component({
   selector: 'app-root',
@@ -16,8 +16,6 @@ var title ;
 
 
 export class AppComponent {
-  title = 'Good Movie App';
-
    
 }
 
