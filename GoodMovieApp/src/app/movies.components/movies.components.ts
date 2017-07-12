@@ -1,11 +1,11 @@
-class Movie{
+import { Component } from '@angular/core';
+import { Http } from '@angular/http';
 
-    title : string;
-    crew: string;
-    cast: string;
-    overview: string;
-    releasedate: Date;
-    rate: number;
-    review: string;
-    
+@Component({
+  selector: 'app-root',
+  templateUrl: './movies.component.html',
+})
+
+export class MoviesComponent {
+     
 }
