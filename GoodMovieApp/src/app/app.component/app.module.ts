@@ -11,7 +11,9 @@ import { DashboardComponent } from '../dashboard.component/dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
-    DialogResult
+    DialogResult,
+    MovieDetailsComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserAnimationsModule,
