@@ -24,11 +24,12 @@ export class MovieSearchComponent {
      
  }                                                       
  
- detailsofmovies(){
+ public detailsOfAllMovies(){
 
      this.getMovieInfo((err,result)=>{
          if(err) throw err;
          console.log(result);
+         return result;
      });
      
  }

@@ -14,7 +14,9 @@ import { MovieSearchComponent } from '../movie-search.component/movie-search.com
 export class MovieListComponent {
   constructor(public dialog: MdDialog) { }
 
-  
+  movielist(){
+    
+  }
   details() {
     this.dialog.open(MovieDetailsComponent);
   }
