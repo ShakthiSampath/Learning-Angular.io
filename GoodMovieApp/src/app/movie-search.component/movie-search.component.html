@@ -1,9 +1,8 @@
 <!--Search Service to be implemented-->
 
 <!--Search-->
+<md-input-container class="searchbar">
+<input  mdInput #movie placeholder="Search by Movie Name" [(ngModel)]="term"/>
+</md-input-container>
 
-  <md-input-container class="searchbar" >
-    <input mdInput class="search" #movie placeholder="Search by Movie Name" />
-  </md-input-container>
-
-<button class = "searchbutton" type="submit" (click)="search(movie.value); movie.value=''" >Search</button>
+<button class = "searchbutton" (click)="detailsofmovies()">Search</button>

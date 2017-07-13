@@ -1,17 +1,16 @@
-import { Component } from '@angular/core';
-
+ import { Component } from '@angular/core';
+ import { Http } from '@angular/http';
+ import { FormControl } from '@angular/forms';
+ 
+  import 'rxjs/add/operator/startWith';
+  import 'rxjs/add/operator/map';
+  
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'Good Movie App';
-  movie = 'Baby Driver';
-}
 
-export class Movie {
-  name:string;
-  rating: number;
-  review:string;
+export class AppComponent {
+  
 }

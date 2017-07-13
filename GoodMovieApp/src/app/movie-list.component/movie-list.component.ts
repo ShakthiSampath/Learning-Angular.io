@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Http } from '@angular/http';
 import { MdDialog } from '@angular/material';
 import { MovieDetailsComponent } from '../movie-details.component/movie-details.component';
+import { MovieSearchComponent } from '../movie-search.component/movie-search.component';
 
 
 @Component({
