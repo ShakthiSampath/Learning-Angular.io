@@ -1,18 +1,67 @@
 
 <!--grids-->
-<div class="container">
-<md-grid-list cols="5" rowHeight="1:1" >
-  <md-grid-tile >
+
+
+<div [fxLayoutWrap]="direction">
+
+<div *ngFor= "let list of listarray.results; let i = index ;">
+
+    <md-card class="example-card" (click) = "details({{listarray.results[i].id}})">
+
+      <img md-card-image src="https://image.tmdb.org/t/p/w500{{listarray.results[i].poster_path}}">
+       <md-card-content>
+        
+          <p class="title">
+              Title - {{listarray.results[i].title}} 
+          </p>
+      </md-card-content> 
+        <md-card-actions>
+        <button md-button>
+          <md-icon>star</md-icon>Rate
+        </button>
+        
+        <button md-button>
+          <md-icon>brush</md-icon>Review
+        </button>
+      </md-card-actions>
+    </md-card>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container"> 
+ 
+  <md-grid-list cols="4" rowHeight="1:1" >  
+  
+  <div *ngFor= "let list of listarray.results; let i = index ;">
+    <md-grid-tile class="grid">  
 
     <md-card class="example-card" (click) = "details()">
-      <img md-card-image src="assets/movie.jpg">
-      <md-card-content>
-        <p>
-          Movie -1 
-        </p>
-      </md-card-content>
-      <md-card-actions>
-        <button md-button >
+
+      <img md-card-image src="https://image.tmdb.org/t/p/w500{{listarray.results[i].poster_path}}">
+       <md-card-content>
+        
+          <p class="title">
+              Title - {{listarray.results[i].title}} 
+          </p>
+      </md-card-content> 
+        <md-card-actions>
+        <button md-button>
           <md-icon>star</md-icon>Rate
         </button>
         
@@ -22,8 +71,41 @@
       </md-card-actions>
     </md-card>
     
-  </md-grid-tile>
-    <md-grid-tile >
+   </md-grid-tile> 
+  </div>
+  
+  </md-grid-list>  
+ </div>  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- <md-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]">
+</md-paginator>  -->
+
+  
+    <!--<md-grid-tile >
 
     <md-card class="example-card" (click) = "details()">
       <img md-card-image src="assets/movie.jpg">
@@ -106,7 +188,5 @@
       </md-card-actions>
     </md-card>
     
-  </md-grid-tile>
+  </md-grid-tile>-->
 
-</md-grid-list>
-</div>

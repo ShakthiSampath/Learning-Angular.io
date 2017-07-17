@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { Http } from '@angular/http';
-import { MdDialog, MdDialogRef } from '@angular/material';
 
 
 import { Movie } from '../movie/movie'; 
@@ -12,7 +11,5 @@ import { Movie } from '../movie/movie';
 })
 
 export class MovieDetailsComponent{
-  constructor(public dialogRef: MdDialogRef<MovieDetailsComponent>) {
-    
-  }
+
 }

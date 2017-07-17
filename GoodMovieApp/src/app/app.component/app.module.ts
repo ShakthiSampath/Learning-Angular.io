@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpModule } from '@angular/http';
 import { FormsModule , NgModel } from '@angular/forms';
-import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule, MdTabsModule, MdGridListModule, MdSlideToggleModule, MdAutocompleteModule, MdInputModule, MdDialogModule } from '@angular/material';
+import { FlexLayoutModule } from "@angular/flex-layout";
+import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule, MdTabsModule, MdGridListModule, MdSlideToggleModule, MdAutocompleteModule, MdInputModule, MdDialogModule, MdPaginatorModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { MovieDetailsComponent } from '../movie-details.component/movie-details.component';
@@ -21,15 +22,15 @@ import { MovieSearchService } from '../movie-search.service/movie-search.service
     MoviesComponent,
     MovieDetailsComponent,
     MovieListComponent,
-    MovieSearchComponent,
-    // MovieSearchService  
+    MovieSearchComponent
+    
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpModule,
     FormsModule,
-    // NgModel,
+    FlexLayoutModule,
     MdButtonModule,
     MdCardModule,
     MdToolbarModule,
@@ -40,7 +41,8 @@ import { MovieSearchService } from '../movie-search.service/movie-search.service
     MdSlideToggleModule,
     MdAutocompleteModule,
     MdInputModule,
-    MdDialogModule
+    MdDialogModule,
+    MdPaginatorModule
   ],
   entryComponents: [MovieDetailsComponent],
   providers: [MdDialogModule, MovieSearchService],

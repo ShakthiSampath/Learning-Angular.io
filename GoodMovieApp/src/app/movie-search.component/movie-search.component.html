@@ -5,4 +5,7 @@
 <input  mdInput #movie placeholder="Search by Movie Name" [(ngModel)]="term"/>
 </md-input-container>
 
-<button class = "searchbutton" (click)="detailsOfAllMovies()">Search</button>
+<button md-raised-button (click) = "detailsOfAllMovies()">Search</button>
+<div *ngIf = "movieobj!==null">
+<movie-list-component [listarray] = "movieobj"></movie-list-component>
+</div>

@@ -1,4 +1,7 @@
-.dialogcard{
-    width:500px;
-    height:500px
+.example-card {
+
+  width: 600px;
+  height: auto;
+  margin: 100px;
+
 }

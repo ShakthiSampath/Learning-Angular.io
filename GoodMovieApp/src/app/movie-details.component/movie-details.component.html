@@ -1,12 +1,22 @@
-<div class="dialogcard">
-<md-card class="example-card">
-      <img md-card-image src="assets/movie.jpg">
-      <md-card-content>
-        <p>
-          Movie -1 
-        </p>
-      </md-card-content>
-      <md-card-actions>
+<md-card class="example-card" >
+      <div>
+      <img md-card-image src="https://image.tmdb.org/t/p/w500{{listarray.results[i].poster_path}}">
+      </div>
+      <div>
+        <md-card-content>
+          <p class="title">
+              Title - <label>{{listarray.results[i].title}}</label>
+              Title - <label>{{listarray.results[i].title}}</label>
+              Title - <label>{{listarray.results[i].title}}</label>
+              Title - <label>{{listarray.results[i].title}}</label>
+              Title - <label>{{listarray.results[i].title}}</label>
+              Title - <label>{{listarray.results[i].title}}</label>
+              Title - <label>{{listarray.results[i].title}}</label>
+          </p>
+      
+      </md-card-content> 
+        </div>
+        <md-card-actions>
         <button md-button>
           <md-icon>star</md-icon>Rate
         </button>
@@ -16,4 +26,3 @@
         </button>
       </md-card-actions>
 </md-card>
-</div>
