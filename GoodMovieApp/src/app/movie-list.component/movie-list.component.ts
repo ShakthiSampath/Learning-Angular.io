@@ -17,8 +17,27 @@ import { Movie } from "../movie/movie";
 
 export class MovieListComponent {
  
+  movieobj: null;
+  id = null;
+
   constructor(public moviedetail: MovieSearchService){}
-  details(id: number){
+   
+  getMovieDetail(cb){
     
-  }
+     this.moviedetail.searchEveryDetail(this.id).subscribe( res => {
+         this.movieobj = res.json(); 
+         cb(null,this.movieobj);
+        }); 
+ }                                                       
+ 
+ public details(id:number){
+    this.id = id;
+     this.getMovieDetail((err,result)=>{
+         if(err) throw err;
+         console.log(result)
+         return result;        
+     });
+     
+ }
+
 }

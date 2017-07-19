@@ -1,7 +1,48 @@
+  
+.example-spacer {
+    flex: 1 0 auto;
+  }
+   .example-spacer-vert {
+    flex: 1 1 auto;
+  }
+  
 .example-card {
-
-  width: 600px;
+  
+  width: 450px;
   height: auto;
-  margin: 100px;
+  margin-top: 30px;
+  margin-left: 35%;
+  margin-bottom: 10%;
 
 }
+
+.example-card img{
+  margin-left: 4px;
+  margin-top: 10px;
+  width: auto;
+  height: 300px;
+
+}
+
+.detail{
+  margin-top: 25px;
+}
+
+.fewinfo{
+  margin-top: 20px;
+  margin-left: 40px;
+  margin-right: auto;
+} 
+
+.Rate{
+  margin-top: 20px;
+}
+
+.Review{
+  margin-top: 20px;
+}
+
+.newinfo{
+  margin-top: 10px;
+   margin-left: 50px; 
+}  

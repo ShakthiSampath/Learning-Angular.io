@@ -1,28 +1,106 @@
+<div *ngIf = "movieDetail">
 <md-card class="example-card" >
-      <div>
-      <img md-card-image src="https://image.tmdb.org/t/p/w500{{listarray.results[i].poster_path}}">
-      </div>
-      <div>
-        <md-card-content>
-          <p class="title">
-              Title - <label>{{listarray.results[i].title}}</label>
-              Title - <label>{{listarray.results[i].title}}</label>
-              Title - <label>{{listarray.results[i].title}}</label>
-              Title - <label>{{listarray.results[i].title}}</label>
-              Title - <label>{{listarray.results[i].title}}</label>
-              Title - <label>{{listarray.results[i].title}}</label>
-              Title - <label>{{listarray.results[i].title}}</label>
-          </p>
-      
-      </md-card-content> 
-        </div>
-        <md-card-actions>
-        <button md-button>
-          <md-icon>star</md-icon>Rate
-        </button>
+     <md-toolbar color="primary">
+            <span>{{movieDetail.title}}</span>
+     </md-toolbar>
+  
+     <div [fxLayout] = "direction">
+            <div class="img"> 
+              <img md-card-image src="https://image.tmdb.org/t/p/w1000{{movieDetail.poster_path}}">  
+            </div> 
+    
+            <div class="newinfo" >
+              <div *ngIf = "countToSaveRate>0">
+                <label><Strong>Rating:</Strong> {{movieNewInfo.rate}}</label>
+              </div>
+              <div *ngIf = "countToSaveReview>0">
+               <br><label><h4>Review:</h4> {{movieNewInfo.review}}</label><br>
+              </div>
+            </div>
+     </div> 
+
+     <span class="example-spacer"></span>  
+       
+     <md-card-content>
+          <div layout = "column">
+          <label> Release Date: {{movieDetail.release_date}}</label>
+          <label><h4>Overview: </h4></label>
+          {{movieDetail.overview}}
+          <span class="example-spacer"></span>
+
+          <div class = "detail" >
+           <form >
+              <md-select placeholder="More Details" [(ngModel)]="selectedValue" name="list">
+                <md-option *ngFor="let list of moreDetails" [value]="list.value">
+                  {{list.viewValue}}
+                </md-option>
+              </md-select>
+
+              <div *ngIf = "selectedValue==='Cast'">
+
+                      <div class = "cast" *ngFor = 'let list of movieDetail.credits.cast'>
+                        <div *ngIf = "list.order <= 15">
+                          <p> {{ list.name }}  |  {{list.character}}
+                        </div>
+                      </div>
+               </div>
+
+              <div *ngIf = "selectedValue==='Crew'">
+                                 
+                      <div class = "crew" *ngFor = 'let list2 of movieDetail.credits.crew, let i = index'>
+                        <div *ngIf = "i <= 15">
+                          <p> {{ list2.name }}  |  {{list2.job}}
+                        </div>
+                      </div>
+              </div>
+          </form>
+          </div>
+            </div>
+                        
+         
+          <!-- <md-input-container class="Review" *ngIf= "countForReview===1" >
+            
+          </md-input-container>  -->
+            
+     </md-card-content>
+  
+          <md-card-actions [fxLayout] = "Direction"> 
+ 
+             <div layout = "column">  
+             <md-input-container  [fxLayoutWrap] = "direction" class="Rate" > 
+              <input #rate mdInput placeholder="Rate the Movie" > 
+              </md-input-container >
+
+              <button class = "button" md-raised-button (click) = "saveRate(rate.value)">
+              Save
+              </button>
+             </div>
+            <span class="example-spacer"></span>
+            <div layout = "column">
+            <md-input-container [fxLayoutWrap] = "direction" class="Review">
+            <input #review mdInput placeholder="Review the Movie"> 
+            </md-input-container> 
+
+            <button md-raised-button (click) = "saveReview(review.value)">
+              Save
+            </button>
+            </div>
+            
         
-        <button md-button>
-          <md-icon>brush</md-icon>Review
-        </button>
-      </md-card-actions>
+            <!-- <button md-button (click) = "createRateInput()">
+              <md-icon>star</md-icon>Rate
+            </button>
+            
+            <button md-button (click) = "createReviewInput()">
+              <md-icon>brush</md-icon>Review
+            </button>
+            <span class="example-spacer"></span> 
+             <button md-raised-button (click) = "save(rate.value,review.value)">
+            Save
+            </button>  --> 
+            
+
+         </md-card-actions>  
+
 </md-card>
+</div>

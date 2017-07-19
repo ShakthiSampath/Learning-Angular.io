@@ -38,6 +38,6 @@ public term: string;
  }
 
  ngOnInit(){
- }
+ }  
 
 }

@@ -1,18 +1,20 @@
-
+<div *ngIf = "id!==null">
+<movie-details-component [movieDetail]="movieobj"></movie-details-component>
+</div>
 <!--grids-->
 
 
 <div [fxLayoutWrap]="direction">
 
 <div *ngFor= "let list of listarray.results; let i = index ;">
+      <!-- <a routerLink="/details" >   -->
+    <md-card class="example-card" (click)="details(list.id)">
 
-    <md-card class="example-card" (click) = "details({{listarray.results[i].id}})">
-
-      <img md-card-image src="https://image.tmdb.org/t/p/w500{{listarray.results[i].poster_path}}">
+      <img md-card-image src="https://image.tmdb.org/t/p/w500{{list.poster_path}}">
        <md-card-content>
         
           <p class="title">
-              Title - {{listarray.results[i].title}} 
+              Title - {{list.title}} 
           </p>
       </md-card-content> 
         <md-card-actions>
@@ -25,9 +27,11 @@
         </button>
       </md-card-actions>
     </md-card>
+     <!-- </a>  -->
 </div>
 
 </div>
+
 
 
 
