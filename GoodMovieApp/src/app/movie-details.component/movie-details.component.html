@@ -68,17 +68,19 @@
  
              <div layout = "column">  
              <md-input-container  [fxLayoutWrap] = "direction" class="Rate" > 
-              <input #rate mdInput placeholder="Rate the Movie" > 
+              <input #rate mdInput placeholder="Rate the Movie" name="inputRate"> 
               </md-input-container >
 
               <button class = "button" md-raised-button (click) = "saveRate(rate.value)">
               Save
               </button>
              </div>
+
             <span class="example-spacer"></span>
+
             <div layout = "column">
             <md-input-container [fxLayoutWrap] = "direction" class="Review">
-            <input #review mdInput placeholder="Review the Movie"> 
+            <input #review mdInput placeholder="Review the Movie" name="inputReview"> 
             </md-input-container> 
 
             <button md-raised-button (click) = "saveReview(review.value)">
