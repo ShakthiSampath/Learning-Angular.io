@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {MdCardModule} from '@angular/material';
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 @Component({
   selector: 'formCard',
@@ -8,5 +8,10 @@ import {MdCardModule} from '@angular/material';
 })
 
 export class FormCardComponent {
-  
+  gender: string;
+
+  genders = [
+    'Male',
+    'Female'
+  ];
 }

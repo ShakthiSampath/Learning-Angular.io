@@ -1,8 +1,30 @@
-.example-card {
+.card {
   width: 400px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left:0;   
+  margin-top: 200px;
+  margin-left: 40%;
 }
 
-.example-header-image {
-  /* background-image: url(''); */
-  background-size: cover;
+.full-width {
+  width: 100%;
+}
+
+.radio-group {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.radio-button {
+  margin: 5px;
+}
+
+.selected-value {
+  margin: 15px 0;
+}
+
+#mdButton {
+  margin-left: 50%;
 }
