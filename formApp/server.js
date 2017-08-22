@@ -19,5 +19,11 @@ mongoose.connect('mongodb://localhost:27017/feedback', function (err, db) {
     }
 });
 
+app.use('/api/v1',require('./api/v1'));
+
+app.use((req,res)=>{
+    res.status(404).send("Resource not found");
+});
+
 app.listen(port);
-console.log("Application running on ", port);
+console.log("Application is running on ", port);

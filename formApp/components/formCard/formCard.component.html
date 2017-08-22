@@ -6,22 +6,19 @@
     </md-toolbar>
     <div layout = "column">
         <md-input-container class="full-width">
-            <input mdInput placeholder="Full Name" >
-        </md-input-container>
-            <md-radio-group class="radio-group">    
-                <label>Gender: </label>
-                <md-radio-button class="radio-button" *ngFor="let option of genders" [value]="option">
-                {{option}}
-                </md-radio-button>
-            </md-radio-group>
-        <md-input-container class="full-width">
-            <input mdInput placeholder="College" >
+            <input mdInput placeholder="Full Name" name="fullName">
         </md-input-container>
         <md-input-container class="full-width">
-            <input mdInput placeholder="Internship Company" >
+            <input mdInput placeholder="Gender" name="gender">
         </md-input-container>
         <md-input-container class="full-width">
-            <textarea mdInput placeholder="Reviews"></textarea>
+            <input mdInput placeholder="College" name="collegeName">
+        </md-input-container>
+        <md-input-container class="full-width">
+            <input mdInput placeholder="Internship Company" name="internshipCompanyName">
+        </md-input-container>
+        <md-input-container class="full-width">
+            <textarea mdInput placeholder="Reviews" name="review"></textarea>
         </md-input-container>
         <button md-raised-button>
             <md-icon>save</md-icon> Save</button>
